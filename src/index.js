@@ -13,14 +13,14 @@ const refs = {
 refs.inputSearch.addEventListener('input', onInput);
 
 function onInput(e) {
-  const name = refs.inputSearch.value;
-  console.log(name);
-
-  // * doesnt work
-  // const name = e.currentTarget.value;
+  // * work
+  // const name = refs.inputSearch.value;
   // console.log(name);
 
-  // * work
+  // * doesnt work
+  const name = e.currentTarget.value;
+  console.log(name);
+
   fetch(`https://restcountries.com/v3.1/name/${name}`)
     .then(response => {
       return response.json();
