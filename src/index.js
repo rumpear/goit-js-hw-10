@@ -9,8 +9,8 @@ const refs = {
   infoCountry: document.querySelector('.country-info'),
 };
 
-// refs.inputSearch.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
-refs.inputSearch.addEventListener('input', onInput);
+refs.inputSearch.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
+// refs.inputSearch.addEventListener('input', onInput);
 
 function onInput(e) {
   // * work
